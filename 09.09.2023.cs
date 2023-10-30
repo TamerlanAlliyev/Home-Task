@@ -1,17 +1,20 @@
 ﻿//1.int tipindən array və 1 int tipindən ədəd qəbul edən metod yazın. Metod bu ədədin bu arrayin hər hansı bir elementinə bərabər olub-olmadığını tapsın.
 
-int[] myArray = { 1, 2, 3, 4, 5 };
-int myNumber = 3;
-static bool Does(int[] array, int num)
+int[] array = { 1, 2, 3, 4, 5, 5, 5, 5, 7, 5, 9, 1, 6, 4, 8 };
+Console.WriteLine("Search Number");
+int num = int.Parse(Console.ReadLine());
+
+bool thereis = Varmi(array, num);
+bool Varmi(int[] a, int b)
 {
-    foreach (int element in array)
+    bool Status = false;
+    for (int i = 0; i < a.Length; i++)
     {
-        if (element == num)
+        if (a[i] == b)
         {
-            return true;
+            Status = true;
         }
     }
-    return false;
+    return Status;
 }
-Console.WriteLine("Array daxilində ədəd tapıldı: true");
-Console.WriteLine("Array daxilində ədəd tapılmadı: false");
+Console.WriteLine(thereis);
