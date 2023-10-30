@@ -4,8 +4,8 @@ int[] array = { 1, 2, 3, 4, 5, 5, 5, 5, 7, 5, 9, 1, 6, 4, 8 };
 Console.WriteLine("Search Number");
 int num = int.Parse(Console.ReadLine());
 
-bool thereis = Varmi(array, num);
-bool Varmi(int[] a, int b)
+bool Thereis = ThereIs(array, num);
+bool ThereIs(int[] a, int b)
 {
     bool Status = false;
     for (int i = 0; i < a.Length; i++)
@@ -17,4 +17,4 @@ bool Varmi(int[] a, int b)
     }
     return Status;
 }
-Console.WriteLine(thereis);
+Console.WriteLine(ThereIs);
